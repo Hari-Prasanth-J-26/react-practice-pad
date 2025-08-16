@@ -1,0 +1,50 @@
+{
+  "name": "react_app",
+  "version": "1.0.0",
+  "description": "This is going to be swiggy app by my version",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://github.com/Hari-Prasanth-J-26/react-practice-pad#readme",
+  "bugs": {
+    "url": "https://github.com/Hari-Prasanth-J-26/react-practice-pad/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hari-Prasanth-J-26/react-practice-pad.git"
+  },
+  "license": "ISC",
+  "author": "Hari Prasanth Jagadeshan",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest",
+    "watch-test": "jest --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "autoprefixer": "^10.4.21",
+    "babel-jest": "^30.0.5",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "parcel": "^2.15.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tailwindcss/postcss": "^4.1.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.7.0",
+    "util": "^0.12.5"
+  },
+  "BrowsersList": [
+    "last 2 versions"
+  ]
+}
