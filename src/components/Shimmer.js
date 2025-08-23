@@ -2,14 +2,14 @@ const Shimmer = () => {
     return (
         
         <div className="flex flex-wrap justify-center m-5 p-15">
-            <div className="m-5 p-5 w-[250px] h-[300px] bg-gray-300 rounded-lg animate-bounce"></div>
-            <div className="m-5 p-5 w-[250px] h-[300px] bg-gray-300 rounded-lg animate-bounce"></div>
-            <div className="m-5 p-5 w-[250px] h-[300px] bg-gray-300 rounded-lg animate-bounce"></div>
-            <div className="m-5 p-5 w-[250px] h-[300px] bg-gray-300 rounded-lg animate-bounce"></div>
-            <div className="m-5 p-5 w-[250px] h-[300px] bg-gray-300 rounded-lg animate-bounce"></div>
-            <div className="m-5 p-5 w-[250px] h-[300px] bg-gray-300 rounded-lg animate-bounce"></div>
-            <div className="m-5 p-5 w-[250px] h-[300px] bg-gray-300 rounded-lg animate-bounce"></div>
-            <div className="m-5 p-5 w-[250px] h-[300px] bg-gray-300 rounded-lg animate-bounce"></div>
+            <div className="m-5 p-5 w-[300px] h-[350px] bg-gray-300 rounded-lg animate-bounce"></div>
+            <div className="m-5 p-5 w-[300px] h-[350px] bg-gray-300 rounded-lg animate-bounce"></div>
+            <div className="m-5 p-5 w-[300px] h-[350px] bg-gray-300 rounded-lg animate-bounce"></div>
+            <div className="m-5 p-5 w-[300px] h-[350px] bg-gray-300 rounded-lg animate-bounce"></div>
+            <div className="m-5 p-5 w-[300px] h-[350px] bg-gray-300 rounded-lg animate-bounce"></div>
+            <div className="m-5 p-5 w-[300px] h-[350px] bg-gray-300 rounded-lg animate-bounce"></div>
+            <div className="m-5 p-5 w-[300px] h-[350px] bg-gray-300 rounded-lg animate-bounce"></div>
+            <div className="m-5 p-5 w-[300px] h-[350px] bg-gray-300 rounded-lg animate-bounce"></div>
         </div>
         /*
         <div className="m-2 p-4 rounded-lg shadow-md bg-gray-200 w-full animate-pulse">
