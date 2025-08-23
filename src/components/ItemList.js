@@ -17,18 +17,20 @@ const ItemList = ({items}) => {
                     
                     <div className="w-9/12">
                         <div className="py-2">
-                            <span>{item.card.info.name}</span>
-                            <span> - ₹ {item.card.info.price ? item.card.info.price/100 : item.card.info.defaultPrice / 100}</span>   
+                            <span className="text-sm font-bold md:text-lg lg:text-lg">{item.card.info.name}</span>
+                            <span className="text-sm font-bold md:text-lg lg:text-lg"> - ₹ {item.card.info.price ? item.card.info.price/100 : item.card.info.defaultPrice / 100}</span>   
                         </div>
-                        <p className="text-xs">{item.card.info.description}</p>
+                        <div className="text-xs md:text-sm lg:text-md">
+                            <p>{item.card.info.description}</p>
+                        </div>
                     </div>
-                    <div className="w-3/12 py-4">
-                        <div className="absolute my-24 px-12">
-                            <button className="rounded-md w-20 bg-white text-green-600 hover:scale-110 transition"
+                    <div className="w-5/12 md:w-4/12 lg:w-3/12 py-4">
+                        <div className="absolute ml-[50px] mt-[90px] md:ml-[70px] md:mt-[110px] lg:ml-[80px] lg:mt-[130px]">
+                            <button className="rounded-md w-11 md:w-14 lg:w-18 bg-white text-green-600 hover:scale-110 transition text-sm md:text-lg lg:text-lg"
                             onClick={() => handleAddItem(item)}
                             >ADD</button>
                         </div>
-                        <img src={CDN_URL + item.card.info.imageId} className="rounded-lg"/>
+                        <img src={CDN_URL + item.card.info.imageId} className="rounded-lg m-2.5 lg:m-0 h-auto"/>
                     </div>
                 </div>
             ))}

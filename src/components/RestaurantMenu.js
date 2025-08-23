@@ -18,7 +18,7 @@ const RestaurantMenu = () => {
 
     const {name, totalRatingsString, costForTwoMessage, id, cuisines }  = resInfo?.cards[2]?.card?.card?.info;
 
-    const { itemCards } = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+   // const { itemCards } = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
     
     const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
         (c) => 
@@ -27,9 +27,9 @@ const RestaurantMenu = () => {
 
     return (
         <div className="text-center">
-            <h1 className="font-bold my-6 text-2xl">{name}</h1>
-            <h4 className="font-bold text-lg">{cuisines.join(", ")} - {costForTwoMessage}</h4>
-            {categories.map((category, index) => 
+            <h1 className="font-bold my-6 text-lg md:text-2xl lg:text-2xl">{name}</h1>
+            <h4 className="font-bold text-md md:text-xl lg:text-xl">{cuisines.join(", ")} - {costForTwoMessage}</h4>
+            {categories?.map((category, index) => 
                 //controlled component
                 <RestaurantCategory 
                 key={category?.card?.card?.title } 

@@ -42,11 +42,11 @@ const Body = () => {
     const {loggedInUser, setUserName} = useContext(UserContext);
 
     //Conditional rendering
-    return listOfRestaurants.length === 0 ? <Shimmer /> : 
+    return listOfRestaurants?.length === 0 ? <Shimmer /> : 
     (
-        <div className="body">
-            <div className="filter flex">
-                <div className="search m-4 p-4">
+        <div className="flex flex-col">
+            <div className="flex flex-wrap lg:flex-row">
+                <div className="ml-4 pl-4 mt-2 pt-2">
                     <input type="text" data-testid="searchInput" className="border" value={searchText} onChange={(e) => {setSearchText(e.target.value)}} 
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
@@ -61,24 +61,25 @@ const Body = () => {
                         setFilteredRestaurants(filteredRestaurant);
                     }}>Search</button>
                 </div>
-                <div className="search m-4 p-4 flex items-center">
+                <div className="ml-4 pl-4 mt-4 pt-4">
                     <button data-testid="resFilterCard" className="px-4 py-1 bg-blue-100 rounded-lg" onClick={()=> {const filteredList = listOfRestaurants.filter((res) => res?.info?.avgRating > 4.2)
                         setFilteredRestaurants(filteredList);
                     }}>Top Rated Restaurants</button>
                 </div>
-                <div className="m-4 p-4 flex items-center">
+                <div className="ml-4 pl-4 mt-4 pt-4">
                     <label>User name: </label>
-                    <input className="border border-black p-1" 
+                    <input className="border rounded-lg border-black p-1" 
                     value={loggedInUser}
                     onChange={(e) => setUserName(e.target.value)}/>
                 </div>                 
             </div>
             <div className="flex flex-wrap justify-center">
-                {filteredRestaurants.map((restaurant) => {
+                {filteredRestaurants?.map((restaurant) => {
                     //return <RestaurantCart key={restaurant?.info?.id} resData={restaurant?.info} />;
                     return <Link
                         key={restaurant?.info?.id}
                         to={"/restaurants/"+restaurant?.info?.id}
+        
                     >
                     <RestaurantCart {...restaurant?.info} /></Link>;
                 })}
